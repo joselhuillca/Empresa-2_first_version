@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     sleep(2000);
                     finish();
-                    Intent cv=new Intent(getApplicationContext(),FacebookActivity.class);
+                    Intent cv=new Intent(getApplicationContext(),LoginActivity.class);
                     startActivity(cv);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 }

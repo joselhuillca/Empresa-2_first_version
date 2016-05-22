@@ -78,6 +78,7 @@ public class LoginActivity extends AppCompatActivity {
         textIniSesion.setPadding(0, 0, 0, config.getHeight(35));
         textIniSesion.setText("INICIAR SESIÓN");
         textIniSesion.setTextColor(Color.BLACK);
+        textIniSesion.setGravity(Gravity.CENTER_HORIZONTAL);
         textIniSesion.setTypeface(tf);
         textIniSesion.setTextSize(config.getHeight(20));
 
@@ -108,7 +109,7 @@ public class LoginActivity extends AppCompatActivity {
         contentButton.setGravity(Gravity.CENTER_HORIZONTAL);
         Button btn_crearC = new Button(this);
         btn_crearC.setTextColor(Color.WHITE);
-        btn_crearC.setText("ENTRAR");
+        btn_crearC.setText("Iniciar Sesión");
         btn_crearC.setTextSize(config.getHeight(20));
         btn_crearC.setBackgroundColor(Color.parseColor("#E53935"));
         btn_crearC.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
@@ -123,6 +124,62 @@ public class LoginActivity extends AppCompatActivity {
         contentButton.addView(btn_crearC);
 
         linearGeneral.addView(contentButton);
+
+        TextView text_infosesion = new TextView(this);
+        text_infosesion.setPadding(0, config.getHeight(35), 0, config.getHeight(35));
+        text_infosesion.setText("Tambien puedes iniciarcsesión usando:");
+        text_infosesion.setTextColor(Color.parseColor("#616161"));
+        text_infosesion.setTypeface(tf);
+        text_infosesion.setTextSize(config.getHeight(18));
+        text_infosesion.setGravity(Gravity.CENTER_HORIZONTAL);
+
+        linearGeneral.addView(text_infosesion);
+
+        LinearLayout contentRegisterFaceGoogle = new LinearLayout(this);
+        contentRegisterFaceGoogle.setPadding(0, config.getHeight(0), 0, 0);
+        contentRegisterFaceGoogle.setOrientation(LinearLayout.HORIZONTAL);
+        contentRegisterFaceGoogle.setGravity(Gravity.CENTER_HORIZONTAL);
+
+        Button btnfaceb = new Button(this);
+        btnfaceb.setBackground(new BitmapDrawable(config.escalarImagen("icons/logo_facebook.png", config.getWidth(90), config.getHeight(90))));
+        contentRegisterFaceGoogle.addView(btnfaceb);
+
+        Button btngoogle = new Button(this);
+        btngoogle.setBackground(new BitmapDrawable(config.escalarImagen("icons/Google_logo.png", config.getWidth(90), config.getHeight(90))));
+        contentRegisterFaceGoogle.addView(btngoogle);
+
+        linearGeneral.addView(contentRegisterFaceGoogle);
+
+        TextView text_registro1 = new TextView(this);
+        text_registro1.setPadding(0, config.getHeight(35), 0, config.getHeight(35));
+        text_registro1.setText("Si no estas registrado,");
+        text_registro1.setTextColor(Color.parseColor("#616161"));
+        text_registro1.setTypeface(tf);
+        text_registro1.setTextSize(config.getHeight(18));
+        text_registro1.setGravity(Gravity.RIGHT);
+
+        TextView text_registro2 = new TextView(this);
+        text_registro2.setPadding(0, config.getHeight(35), 0, config.getHeight(35));
+        text_registro2.setText("registrate aqui!");
+        text_registro2.setTextColor(Color.parseColor("#F44336"));
+        text_registro2.setTypeface(tf);
+        text_registro2.setTextSize(config.getHeight(18));
+        text_registro2.setGravity(Gravity.LEFT);
+        text_registro2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                funRegister();
+            }
+        });
+
+        LinearLayout contentRegister = new LinearLayout(this);
+        contentRegister.setPadding(0, config.getHeight(5), 0, 0);
+        contentRegister.setOrientation(LinearLayout.HORIZONTAL);
+        contentRegister.setGravity(Gravity.CENTER_HORIZONTAL);
+        contentRegister.addView(text_registro1);
+        contentRegister.addView(text_registro2);
+
+        linearGeneral.addView(contentRegister);
 
         mainLayout.addView(linearGeneral);
 
@@ -207,5 +264,13 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(LoginActivity.this,NavigatorMapas.class);
         startActivity(intent);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
+
+    public void funRegister(){
+        //if(chkLogin.isChecked()){
+            Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        //}
     }
 }

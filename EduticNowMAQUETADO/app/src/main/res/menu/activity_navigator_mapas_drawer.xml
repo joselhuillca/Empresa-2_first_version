@@ -3,33 +3,33 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_cuenta"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Buscar Ruta" />
+            android:title="Mi Cuenta" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_rutas"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Mapa General" />
+            android:title="Mis Rutas" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_calificaciones"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="none" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="none" />
+            android:title="Mis Calificaciones" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Opciones">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_configuracion"
                 android:icon="@drawable/ic_menu_share"
-                android:title="none" />
+                android:title="Configuracón" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_ayuda"
                 android:icon="@drawable/ic_menu_send"
-                android:title="none" />
+                android:title="Ayuda" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Acerca de safe Paths" />
         </menu>
     </item>
 
