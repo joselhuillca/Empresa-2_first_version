@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF3E0"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="25dp"
+    android:paddingBottom="20dp"
+    android:weightSum="10">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:textSize="18dp"
+        android:text="Añadir una descripción:"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/editT_contenido"
+        android:background="@android:color/white"
+        android:hint="Escribe una descripción ..."
+        android:gravity="top|start"
+        android:layout_weight="7" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="5dp">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_cancelarDescript"
+            android:layout_gravity="start|center_vertical"
+            android:paddingRight="1dp"
+            android:textColor="@android:color/white"
+            android:background="#E65100"
+            android:text="CANCELAR"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_aceptarDescript"
+            android:layout_gravity="end|center_vertical"
+            android:paddingLeft="1dp"
+            android:textColor="@android:color/white"
+            android:background="#FF5722"
+            android:text="ACEPTAR"/>
+    </LinearLayout>
+
+
+</LinearLayout>
